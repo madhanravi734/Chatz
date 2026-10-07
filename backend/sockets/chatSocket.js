@@ -37,8 +37,8 @@ const initSocket = (io) => {
         });
 
         await message.save();
-
-        io.to(roomId).emit('receive_message', message);
+await message.populate("sentby", "username");
+io.to(roomId).emit('receive_message', message);
       } catch (error) {
         console.log(error);
       }
