@@ -1,0 +1,1 @@
+module.exports = ["http://localhost:5173", "https://chatz-fawn.vercel.app"];
